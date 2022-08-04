@@ -1,0 +1,1736 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="吉林大学，考研，计算机网络，物理层">
+    <meta name="description" content="努力学习的小盆友">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>强化-计网第二章-物理层 | 冷的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<script src="/js/cursor.js"></script>
+
+<!-- weather -->
+<script type="text/javascript">
+    WIDGET = {FID: 'CdvtlJKi3n'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+<body>
+    
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">冷的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags/" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories/" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives/" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about/" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact/" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends/" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-card" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/galleries/" class="waves-effect waves-light">
+      
+      <i class="fas fa-image" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">冷的博客</div>
+        <div class="logo-desc">
+            
+            努力学习的小盆友
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-card"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/galleries/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-image"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<!-- <a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a> -->
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">强化-计网第二章-物理层</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        /* width: 225px;
+        padding-left: 1px; 20
+        padding-right: 3px; 20 */
+        width: 285px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        padding-top: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l10">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%80%BB%E7%BB%93/">
+                                <span class="chip bg-color">总结</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%80%83%E7%A0%94/">
+                                <span class="chip bg-color">考研</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                <span class="chip bg-color">计网</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%BC%BA%E5%8C%96/">
+                                <span class="chip bg-color">强化</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%A1%E7%BD%91/" class="post-category">
+                                计网
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-09-16
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-09-21
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.6k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="强化-计网第二章-物理层"><a href="#强化-计网第二章-物理层" class="headerlink" title="强化 计网第二章 物理层"></a>强化 计网第二章 物理层</h2><h3 id="1-通信系统"><a href="#1-通信系统" class="headerlink" title="1.通信系统"></a>1.通信系统</h3><h4 id="1-1组成"><a href="#1-1组成" class="headerlink" title="1.1组成"></a>1.1组成</h4><h5 id="1-1-1信源"><a href="#1-1-1信源" class="headerlink" title="1.1.1信源"></a>1.1.1信源</h5><ul>
+<li>产生要发送数据的设备</li>
+</ul>
+<h5 id="1-1-2发送设备"><a href="#1-1-2发送设备" class="headerlink" title="1.1.2发送设备"></a>1.1.2发送设备</h5><ul>
+<li>对数据信息编码的设备</li>
+</ul>
+<h5 id="1-1-3传输系统"><a href="#1-1-3传输系统" class="headerlink" title="1.1.3传输系统"></a>1.1.3传输系统</h5><ul>
+<li>传输线路或网络</li>
+</ul>
+<h5 id="1-1-4接收设备"><a href="#1-1-4接收设备" class="headerlink" title="1.1.4接收设备"></a>1.1.4接收设备</h5><ul>
+<li>将接受的信号变成数据</li>
+</ul>
+<h5 id="1-1-5信宿"><a href="#1-1-5信宿" class="headerlink" title="1.1.5信宿"></a>1.1.5信宿</h5><ul>
+<li>从接收设备接收数据信息。就是目的系统</li>
+</ul>
+<h3 id="2-编码与调制"><a href="#2-编码与调制" class="headerlink" title="2.编码与调制"></a>2.编码与调制</h3><h4 id="2-1信号类型"><a href="#2-1信号类型" class="headerlink" title="2.1信号类型"></a>2.1信号类型</h4><h5 id="2-1-1模拟信号"><a href="#2-1-1模拟信号" class="headerlink" title="2.1.1模拟信号"></a>2.1.1模拟信号</h5><ul>
+<li>随时间连续变化的电磁波形式（信号）</li>
+</ul>
+<h6 id="2-1-1-1波特率"><a href="#2-1-1-1波特率" class="headerlink" title="2.1.1.1波特率"></a>2.1.1.1波特率</h6><ul>
+<li>每秒发送的波数</li>
+</ul>
+<h5 id="2-1-2数字信号"><a href="#2-1-2数字信号" class="headerlink" title="2.1.2数字信号"></a>2.1.2数字信号</h5><ul>
+<li>离散的，数值的变化是瞬时的</li>
+</ul>
+<h6 id="2-1-2-1比特间隙"><a href="#2-1-2-1比特间隙" class="headerlink" title="2.1.2.1比特间隙"></a>2.1.2.1比特间隙</h6><ul>
+<li>发送一比特所需要的时间</li>
+</ul>
+<h6 id="2-1-2-2比特率"><a href="#2-1-2-2比特率" class="headerlink" title="2.1.2.2比特率"></a>2.1.2.2比特率</h6><ul>
+<li>一秒钟内的比特间隙个数，是每秒发送的比特数，单位是bps（位每秒）</li>
+</ul>
+<h6 id="2-1-2-3有效带宽"><a href="#2-1-2-3有效带宽" class="headerlink" title="2.1.2.3有效带宽"></a>2.1.2.3有效带宽</h6><ul>
+<li>数字信号的频谱包括不同振幅的无数多个频率，如果根据一定的门限，只传输那些具有重要振幅的分量，仍然可以以合理的精度在接收端还原出数字信号，则数字信号频谱中的这一部分称作有效频谱，有效频谱的带宽称为有效带宽</li>
+</ul>
+<h4 id="2-2信道数据传输率"><a href="#2-2信道数据传输率" class="headerlink" title="2.2信道数据传输率"></a>2.2信道数据传输率</h4><h5 id="2-2-1奈奎斯特定理（奈氏准则）"><a href="#2-2-1奈奎斯特定理（奈氏准则）" class="headerlink" title="2.2.1奈奎斯特定理（奈氏准则）"></a>2.2.1奈奎斯特定理（奈氏准则）</h5><h5 id="2-2-2香农定理"><a href="#2-2-2香农定理" class="headerlink" title="2.2.2香农定理"></a>2.2.2香农定理</h5><h4 id="2-3数字-数字编码"><a href="#2-3数字-数字编码" class="headerlink" title="2.3数字-数字编码"></a>2.3数字-数字编码</h4><h5 id="2-3-1单极性编码"><a href="#2-3-1单极性编码" class="headerlink" title="2.3.1单极性编码"></a>2.3.1单极性编码</h5><ul>
+<li>电压只有一极，高电平表示1，低电平表示0</li>
+</ul>
+<img src="单极性编码.png" alt="单极性编码" style="zoom: 67%;">
+
+<h5 id="2-3-2极化编码"><a href="#2-3-2极化编码" class="headerlink" title="2.3.2极化编码"></a>2.3.2极化编码</h5><ul>
+<li>一个正电压，一个负电压。通过使用两个电压，减轻了单极性编码中的直流分量问题</li>
+</ul>
+<h6 id="2-3-2-1非归零编码"><a href="#2-3-2-1非归零编码" class="headerlink" title="2.3.2.1非归零编码"></a>2.3.2.1非归零编码</h6><ul>
+<li>正电压为1，负电压为0</li>
+</ul>
+<h6 id="2-3-2-2归零编码"><a href="#2-3-2-2归零编码" class="headerlink" title="2.3.2.2归零编码"></a>2.3.2.2归零编码</h6><ul>
+<li>电平翻转一次为1，没有电平变化为0</li>
+<li>电平的翻转能提供一种同步机制</li>
+</ul>
+<img src="非归零编码.png" alt="非归零编码" style="zoom:67%;">
+
+<h6 id="2-3-2-3双相位编码"><a href="#2-3-2-3双相位编码" class="headerlink" title="2.3.2.3双相位编码"></a>2.3.2.3双相位编码</h6><ul>
+<li>曼彻斯特编码：一个<strong>负电平到正电平</strong>的跳边<strong>代表1</strong>，由<strong>正到负代表0</strong></li>
+<li>差分曼彻斯特编码：每个比特间隙的开始位置<strong>有跳变代表0</strong>，<strong>没有跳变代表1</strong></li>
+</ul>
+<h4 id="2-4数字-模拟编码"><a href="#2-4数字-模拟编码" class="headerlink" title="2.4数字-模拟编码"></a>2.4数字-模拟编码</h4><h5 id="2-4-1幅移键控（ASK）"><a href="#2-4-1幅移键控（ASK）" class="headerlink" title="2.4.1幅移键控（ASK）"></a>2.4.1幅移键控（ASK）</h5><img src="ASK.png" alt="ASK" style="zoom:67%;">
+
+<h5 id="2-4-2频移键控（FSK）"><a href="#2-4-2频移键控（FSK）" class="headerlink" title="2.4.2频移键控（FSK）"></a>2.4.2频移键控（FSK）</h5><img src="FSK.png" alt="FSK" style="zoom:67%;">
+
+<h5 id="2-4-3相移键控（PSK）"><a href="#2-4-3相移键控（PSK）" class="headerlink" title="2.4.3相移键控（PSK）"></a>2.4.3相移键控（PSK）</h5><img src="PSK.png" alt="PSK" style="zoom:67%;">
+
+<h5 id="2-4-4正交调幅（QAM）"><a href="#2-4-4正交调幅（QAM）" class="headerlink" title="2.4.4正交调幅（QAM）"></a>2.4.4正交调幅（QAM）</h5><ul>
+<li>ASK和PSK结合起来的编码方式</li>
+</ul>
+<img src="QAM.png" alt="QAM" style="zoom: 67%;">
+
+<h3 id="3-线路配置与传输模式"><a href="#3-线路配置与传输模式" class="headerlink" title="3.线路配置与传输模式"></a>3.线路配置与传输模式</h3><h4 id="3-1传输模式"><a href="#3-1传输模式" class="headerlink" title="3.1传输模式"></a>3.1传输模式</h4><h5 id="3-1-1点到点连接"><a href="#3-1-1点到点连接" class="headerlink" title="3.1.1点到点连接"></a>3.1.1点到点连接</h5><ul>
+<li>提供了两个设备之间的专用链路。整个信道的容量都被用于这两个设备之间的传输</li>
+</ul>
+<h5 id="3-1-2多点连接"><a href="#3-1-2多点连接" class="headerlink" title="3.1.2多点连接"></a>3.1.2多点连接</h5><ul>
+<li>两个以上的设备共享一条链路的配置方式。信道的容量是通过某种途径共享的</li>
+<li>实现<strong>信道共享</strong>的技术称为<strong>复用技术</strong></li>
+</ul>
+<h5 id="3-1-3单工、半双工、双工"><a href="#3-1-3单工、半双工、双工" class="headerlink" title="3.1.3单工、半双工、双工"></a>3.1.3单工、半双工、双工</h5><ul>
+<li>单工：<strong>通信单向进行</strong>，两个站点中只有一个可以进行传输，另一个只能接收</li>
+<li>半双工：每个站点都可以发送和接收数据，但是<strong>不能同时发送和接收数据</strong>。</li>
+<li>双工：两个站点<strong>都可以同时发送和接收数据</strong></li>
+</ul>
+<h5 id="3-1-4串行、并行"><a href="#3-1-4串行、并行" class="headerlink" title="3.1.4串行、并行"></a>3.1.4串行、并行</h5><ul>
+<li>并行：在每个时钟脉冲到来时，多个比特被同时发送，每个比特使用单独的一条线路</li>
+<li>串行：每个时钟脉冲只发送一个比特，它只使用一条线路，逐个传送</li>
+</ul>
+<h5 id="3-1-5同步、异步"><a href="#3-1-5同步、异步" class="headerlink" title="3.1.5同步、异步"></a>3.1.5同步、异步</h5><ul>
+<li>异步：比特流划分成多个小组独立传送。随时发，有开始位，终止位，用于低速设备。开销大，先发开始位0，发送一个字节，在发送终止位1，如此循环</li>
+<li>同步：成块的发送比特流，字符之间不加开始位和停止位。先二进制同步（法一：接收端和发送端之间单设一条线传送时钟脉冲；法二：采用自同步编码，曼彻斯特编码等），再数据帧同步，在数据帧前后加上起始和结束标志</li>
+</ul>
+<h4 id="3-2多路复用"><a href="#3-2多路复用" class="headerlink" title="3.2多路复用"></a>3.2多路复用</h4><h5 id="3-2-1频分多路复用（FDM）"><a href="#3-2-1频分多路复用（FDM）" class="headerlink" title="3.2.1频分多路复用（FDM）"></a>3.2.1频分多路复用（FDM）</h5><ul>
+<li><strong>模拟信号</strong></li>
+</ul>
+<h5 id="3-2-1时分多路复用（TDM）"><a href="#3-2-1时分多路复用（TDM）" class="headerlink" title="3.2.1时分多路复用（TDM）"></a>3.2.1时分多路复用（TDM）</h5><ul>
+<li><strong>数字信号</strong></li>
+</ul>
+<h5 id="3-2-1波分多路复用（WDM）"><a href="#3-2-1波分多路复用（WDM）" class="headerlink" title="3.2.1波分多路复用（WDM）"></a>3.2.1波分多路复用（WDM）</h5><ul>
+<li><strong>模拟信号</strong></li>
+<li>光纤</li>
+</ul>
+<h5 id="3-2-1码分多路复用（CDM）-码分多址复用（CDMA）"><a href="#3-2-1码分多路复用（CDM）-码分多址复用（CDMA）" class="headerlink" title="3.2.1码分多路复用（CDM）/码分多址复用（CDMA）"></a>3.2.1码分多路复用（CDM）/码分多址复用（CDMA）</h5><ul>
+<li>根据码型结构的不同来实现信号分割</li>
+<li>在CDMA每个比特被分成m个不同码片，每个站点被指定一个唯一的m位码片（码型）。当发送比特1时，站点就发送其码片，想发送0时，站点就发送其码片的补码</li>
+</ul>
+<h4 id="3-3数据交换技术"><a href="#3-3数据交换技术" class="headerlink" title="3.3数据交换技术"></a>3.3数据交换技术</h4><h5 id="3-3-1电路交换"><a href="#3-3-1电路交换" class="headerlink" title="3.3.1电路交换"></a>3.3.1电路交换</h5><ul>
+<li>在两个设备之间创建一条临时的物理连接</li>
+<li>通讯过程：电路建立、数据传输、电路拆除</li>
+</ul>
+<h5 id="3-3-2报文交换（存储转发）"><a href="#3-3-2报文交换（存储转发）" class="headerlink" title="3.3.2报文交换（存储转发）"></a>3.3.2报文交换（存储转发）</h5><ul>
+<li>在报文的传输过程中，由网络的中间结点将报文暂时存储起来，检查它的正确性和完整性，然后再发往下一个结点</li>
+</ul>
+<h5 id="3-3-3分组交换"><a href="#3-3-3分组交换" class="headerlink" title="3.3.3分组交换"></a>3.3.3分组交换</h5><ul>
+<li>在分组交换中，较长的报文被分为较短的数据单元，然后每个数据单元被加上一些通信控制信息等内容，形成一个信息包（packet）。通信时以包为单位发送、存储和转发。信息包包含数据和包头，包头由通信控制信息、差错控制信息等组成</li>
+<li>信息包比报文短得多，因此可以在中间结点存储，不必访问外存。而且只要整个信息包到达后就可以转发，不必等待很长的报文全部到达，大大缩短了信息传输过程中的延迟时间</li>
+</ul>
+<h6 id="3-3-3-1数据报"><a href="#3-3-3-1数据报" class="headerlink" title="3.3.3.1数据报"></a>3.3.3.1数据报</h6><ul>
+<li>数据报方法中，包被称为数据报，在传输中每个包都将独立于其他包进行处理</li>
+<li><strong>到达的顺序可能不同</strong>，对数据报进行重排的任务可以由网络层的上层（传输层）来完成</li>
+</ul>
+<h6 id="3-3-3-2虚电路"><a href="#3-3-3-2虚电路" class="headerlink" title="3.3.3.2虚电路"></a>3.3.3.2虚电路</h6><ul>
+<li>虚电路方法中，属于同一次通信的所有包之间的关系得以维持。当数据开始时，将按照预定好的路线一个接一个的传送</li>
+<li>任何一条链路可以同时为多对设备之间的通信服务</li>
+<li>在需要的时候被创建、通信传输、拆除</li>
+<li>仅在建立虚电路时需要目的地址，在进行数据传送时，每个包不需要携带完整的目的地址，只需要一个虚电路的号码标识。减少了包的控制信息长度，从而减少了额外开销</li>
+</ul>
+<h4 id="3-4错误检验和控制"><a href="#3-4错误检验和控制" class="headerlink" title="3.4错误检验和控制"></a>3.4错误检验和控制</h4><ul>
+<li>见题型即可</li>
+</ul>
+<h5 id="3-4-1奇偶校验码"><a href="#3-4-1奇偶校验码" class="headerlink" title="3.4.1奇偶校验码"></a>3.4.1奇偶校验码</h5><h6 id="3-4-1-1垂直（纵向）奇偶校验"><a href="#3-4-1-1垂直（纵向）奇偶校验" class="headerlink" title="3.4.1.1垂直（纵向）奇偶校验"></a>3.4.1.1垂直（纵向）奇偶校验</h6><h6 id="3-4-1-2水平（横向）奇偶校验"><a href="#3-4-1-2水平（横向）奇偶校验" class="headerlink" title="3.4.1.2水平（横向）奇偶校验"></a>3.4.1.2水平（横向）奇偶校验</h6><h5 id="3-4-1循环校验码CRC"><a href="#3-4-1循环校验码CRC" class="headerlink" title="3.4.1循环校验码CRC"></a>3.4.1循环校验码CRC</h5><h5 id="3-4-2校验和"><a href="#3-4-2校验和" class="headerlink" title="3.4.2校验和"></a>3.4.2校验和</h5><h3 id="4-传输介质"><a href="#4-传输介质" class="headerlink" title="4.传输介质"></a>4.传输介质</h3><h4 id="4-1有线介质"><a href="#4-1有线介质" class="headerlink" title="4.1有线介质"></a>4.1有线介质</h4><h5 id="4-1-1双绞线"><a href="#4-1-1双绞线" class="headerlink" title="4.1.1双绞线"></a>4.1.1双绞线</h5><ul>
+<li>由扭在一起的两根绝缘铜线组成</li>
+<li>用于传输平衡信号</li>
+</ul>
+<h5 id="4-1-2同轴电缆"><a href="#4-1-2同轴电缆" class="headerlink" title="4.1.2同轴电缆"></a>4.1.2同轴电缆</h5><h5 id="4-1-3光纤"><a href="#4-1-3光纤" class="headerlink" title="4.1.3光纤"></a>4.1.3光纤</h5><ul>
+<li>光的速度依赖于它所穿越的传输介质的密度，密度越大，速度越低</li>
+</ul>
+<h6 id="4-1-3-1多模传播"><a href="#4-1-3-1多模传播" class="headerlink" title="4.1.3.1多模传播"></a>4.1.3.1多模传播</h6><ul>
+<li><p>多束光线在芯材中通过不同的路径</p>
+</li>
+<li><p>多模阶跃：密度突变，不同角度，速度不同，</p>
+</li>
+<li><p>多模渐变：密度渐变，速度相同，中心密度最大，并向外逐步变小</p>
+</li>
+</ul>
+<h6 id="4-1-3-2单模传播"><a href="#4-1-3-2单模传播" class="headerlink" title="4.1.3.2单模传播"></a>4.1.3.2单模传播</h6><ul>
+<li>单模光纤采用阶跃材质和高度集中的光源。芯材直径比多模光纤小得多</li>
+</ul>
+<h4 id="4-2无线介质"><a href="#4-2无线介质" class="headerlink" title="4.2无线介质"></a>4.2无线介质</h4><h5 id="4-2-1卫星、微波、红外线"><a href="#4-2-1卫星、微波、红外线" class="headerlink" title="4.2.1卫星、微波、红外线"></a>4.2.1卫星、微波、红外线</h5><h3 id="5-物理连接"><a href="#5-物理连接" class="headerlink" title="5.物理连接"></a>5.物理连接</h3><ul>
+<li>在数据通信中涉及4个基本功能单元：两端各有一个数据终端设备（DTE）和一个数据电路终接设备</li>
+</ul>
+<h4 id="5-1数据终端设备（DTE）"><a href="#5-1数据终端设备（DTE）" class="headerlink" title="5.1数据终端设备（DTE）"></a>5.1数据终端设备（DTE）</h4><ul>
+<li>DTE是具有数据处理能力及发送和接收数据信息能力的设备</li>
+<li>DTE一般不直接连接网络，它通过一台DCE进行通信。</li>
+<li>我们把DTE和DCE的连接称为DTE-DCE接口</li>
+<li>在DTE-DCE接口上既有数据信息又有控制信息，为了<strong>使各个计算机公司生产的DTE可以方便的和DCE连接</strong>，就<strong>必须对DTE-DCE接口进行标准化</strong>，这些就是<strong>物理层的协议</strong></li>
+</ul>
+<h4 id="5-2数据电路终接设备（DCE）"><a href="#5-2数据电路终接设备（DCE）" class="headerlink" title="5.2数据电路终接设备（DCE）"></a>5.2数据电路终接设备（DCE）</h4><ul>
+<li>DCE是能够通过网络发送和接收模拟或数字信号形式数据的设备</li>
+<li><strong>总结</strong></li>
+<li>数据从上层数据链路层传来</li>
+<li>DTE处理数据，并交给DCE转换成能通过传输介质的电磁信号</li>
+<li>电磁信号通过传输介质传输</li>
+<li>各端的DCE接收这些电磁信号形成数据交给DTE处理</li>
+<li>DTE处理完数据，交给上层的数据链路层</li>
+</ul>
+<h3 id="6-物理层协议"><a href="#6-物理层协议" class="headerlink" title="6.物理层协议"></a>6.物理层协议</h3><h4 id="6-1EIA232"><a href="#6-1EIA232" class="headerlink" title="6.1EIA232"></a>6.1EIA232</h4><h5 id="6-1-1机械特性"><a href="#6-1-1机械特性" class="headerlink" title="6.1.1机械特性"></a>6.1.1机械特性</h5><h5 id="6-1-2电气特性"><a href="#6-1-2电气特性" class="headerlink" title="6.1.2电气特性"></a>6.1.2电气特性</h5><h5 id="6-1-3功能特性"><a href="#6-1-3功能特性" class="headerlink" title="6.1.3功能特性"></a>6.1.3功能特性</h5><h5 id="6-1-4规程特性"><a href="#6-1-4规程特性" class="headerlink" title="6.1.4规程特性"></a>6.1.4规程特性</h5><h4 id="6-2X-21"><a href="#6-2X-21" class="headerlink" title="6.2X.21"></a>6.2X.21</h4><h3 id="7-工作的设备"><a href="#7-工作的设备" class="headerlink" title="7.工作的设备"></a>7.工作的设备</h3><h4 id="7-1中继器或转发器"><a href="#7-1中继器或转发器" class="headerlink" title="7.1中继器或转发器"></a>7.1中继器或转发器</h4><ul>
+<li>中继器是一个再生器，不是一个增幅器，只是将受损的信号重新还原成原始的形式，会导致局域网性能下降</li>
+</ul>
+<h4 id="7-2集线器"><a href="#7-2集线器" class="headerlink" title="7.2集线器"></a>7.2集线器</h4><ul>
+<li>多端口中继器，建立星状、树状网络结构</li>
+</ul>
+<h3 id="8-考题类型"><a href="#8-考题类型" class="headerlink" title="8.考题类型"></a>8.考题类型</h3><h4 id="8-1-111000111000的曼彻斯特编码和差分曼彻斯特编码？"><a href="#8-1-111000111000的曼彻斯特编码和差分曼彻斯特编码？" class="headerlink" title="8.1 111000111000的曼彻斯特编码和差分曼彻斯特编码？"></a>8.1 111000111000的曼彻斯特编码和差分曼彻斯特编码？</h4><h4 id="8-2-CRC校验码"><a href="#8-2-CRC校验码" class="headerlink" title="8.2 CRC校验码"></a>8.2 CRC校验码</h4><ul>
+<li>是x的几次多项式，就在带传送数据后加几个0</li>
+<li><font color="red"><strong>同0异1</strong></font></li>
+<li>做除法，得出来的余数，加到带传输的数据后即可</li>
+</ul>
+<h4 id="8-3电路交换网络和包交换（分组交换）网络的主要区别是什么？"><a href="#8-3电路交换网络和包交换（分组交换）网络的主要区别是什么？" class="headerlink" title="8.3电路交换网络和包交换（分组交换）网络的主要区别是什么？"></a>8.3电路交换网络和包交换（分组交换）网络的主要区别是什么？</h4><h4 id="8-4已知信道速率为1Mbps，离散电平数目为16，根据奈奎斯特定理，求信道带宽"><a href="#8-4已知信道速率为1Mbps，离散电平数目为16，根据奈奎斯特定理，求信道带宽" class="headerlink" title="8.4已知信道速率为1Mbps，离散电平数目为16，根据奈奎斯特定理，求信道带宽"></a>8.4已知信道速率为1Mbps，离散电平数目为16，根据奈奎斯特定理，求信道带宽</h4><ul>
+<li><p><strong>W</strong>：理想低通信信道的<strong>带宽</strong>，单位为Hz</p>
+</li>
+<li><p><strong>V</strong>：表示每个码元离散电平的数目</p>
+</li>
+<li><p>则理想低通信道下的极限数据传输率 = <strong>$2Wlog_2V$</strong></p>
+</li>
+<li><p>$1<em>10^6=2H</em>1<em>4, H=1</em>10^6/8=125000Hz$</p>
+</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">冷冷冷</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://blog.bangbangbangbang.top/posts/f655.html/">http://blog.bangbangbangbang.top/posts/f655.html/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">冷冷冷</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%80%BB%E7%BB%93/">
+                                    <span class="chip bg-color">总结</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%80%83%E7%A0%94/">
+                                    <span class="chip bg-color">考研</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                    <span class="chip bg-color">计网</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%BC%BA%E5%8C%96/">
+                                    <span class="chip bg-color">强化</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        /* max-width: 100%; */
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>用户交流区</span>
+        <p cst="">温馨提示: 遵纪守法, 友善评论!</p>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'hLiMICB7hl5rRQnFlboDR9Mt-gzGzoHsz',
+        appKey: 'Al2q59mu4bHWbVo64fT1ip0U',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '粘贴图片到此处可以自动上传，填写邮箱可以自动回复哦'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/5f19.html/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="2018-941">
+                        
+                        <span class="card-title">2018-941</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            2018-941学硕代码题
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-17
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%BB%A3%E7%A0%81/" class="post-category">
+                                    代码
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BB%A3%E7%A0%81/">
+                        <span class="chip bg-color">代码</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%80%83%E7%A0%94/">
+                        <span class="chip bg-color">考研</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/232f.html/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="排序算法">
+                        
+                        <span class="card-title">排序算法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            排序算法整理
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%BB%A3%E7%A0%81/" class="post-category">
+                                    代码
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BB%A3%E7%A0%81/">
+                        <span class="chip bg-color">代码</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%80%83%E7%A0%94/">
+                        <span class="chip bg-color">考研</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 冷的博客<br />'
+            + '文章作者: 冷冷冷<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l2 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h3, h4 , h5 , h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h3, h4 , h5 , h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">冷冷冷</a>
+            |&nbsp;
+            
+                <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="http://www.beian.gov.cn/" target="_blank">黑ICP备20004207号</a>
+                </span>
+                
+            <!-- Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> -->
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            <!-- <br> -->
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-blue"></span>&nbsp;次
+            </span>
+            
+            <!-- 
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+             -->
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "7";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "小破站已勉强维持 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "小破站已勉强维持 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Leng-bingo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:805477481@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=805477481" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 805477481" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+
+</body>
+
+</html>

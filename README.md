@@ -1,5 +1,12 @@
 - Hexo博客代码源码
 
+```git
+git remote add origin git@github.com:Leng-bingo/Leng-Blog.git
+git push -u origin main
+```
+
+
+
 - git基本操作
 
   ```

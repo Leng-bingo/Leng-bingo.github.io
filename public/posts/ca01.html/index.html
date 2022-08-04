@@ -1,0 +1,1641 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="SimCSE（六）, Hexo,Sakura,JavaScript,html5,css3,Jquery,NodeJs,github,css,js,html,java">
+    <meta name="description" content="努力学习的小盆友">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>SimCSE（六） | 冷的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<script src="/js/cursor.js"></script>
+
+<!-- weather -->
+<script type="text/javascript">
+    WIDGET = {FID: 'CdvtlJKi3n'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+<body>
+    
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">冷的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags/" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories/" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives/" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about/" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact/" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends/" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-card" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/galleries/" class="waves-effect waves-light">
+      
+      <i class="fas fa-image" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">冷的博客</div>
+        <div class="logo-desc">
+            
+            努力学习的小盆友
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-card"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/galleries/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-image"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<!-- <a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a> -->
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">SimCSE（六）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">论文</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                                <span class="chip bg-color">研究生</span>
+                            </a>
+                        
+                            <a href="/tags/SimCSE/">
+                                <span class="chip bg-color">SimCSE</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">
+                                <span class="chip bg-color">知识图谱</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                论文
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-30
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-30
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.8k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Simple-Contrastive-Learning-of-Sentence-Embeddings（六）"><a href="#Simple-Contrastive-Learning-of-Sentence-Embeddings（六）" class="headerlink" title="Simple Contrastive Learning of Sentence Embeddings（六）"></a>Simple Contrastive Learning of Sentence Embeddings（六）</h1><h3 id="3-Unsupervised-SimCSE-and-supervised-SimCSE"><a href="#3-Unsupervised-SimCSE-and-supervised-SimCSE" class="headerlink" title="3 Unsupervised SimCSE and supervised SimCSE"></a>3 Unsupervised SimCSE and supervised SimCSE</h3><hr>
+<h4 id="还需学习的知识点"><a href="#还需学习的知识点" class="headerlink" title="还需学习的知识点"></a><font color="red">还需学习的知识点</font></h4><ul>
+<li><p>dropout mask，mask是什么意思</p>
+</li>
+<li><p>STS-B（Semantic Textual Similarity Benchmark）：语义文本相似度基准</p>
+</li>
+<li><p>write one sentence that is absolutely true (entailment), one that might be true (neutral), and one that is definitely false (contradiction). </p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>In this section, we describe our unsupervised SimCSE model. </p>
+</blockquote>
+<ul>
+<li>在本节中，我们将介绍我们的无监督SimCSE模型。</li>
+</ul>
+<blockquote>
+<p>The idea is extremely simple: we take a collection of sentences $\left{x_{i}\right}_{i=1}^{m}$ and use $x_i^+=x_i$. </p>
+</blockquote>
+<ul>
+<li>这个想法非常简单：我们取一组句子$\left{x_{i}\right}_{i=1}^{m}$，然后使$x_i^+=x_i$。</li>
+</ul>
+<blockquote>
+<p>The key ingredient to get this to work with identical positive pairs is through the use of independently sampled <em>dropout masks</em>. </p>
+</blockquote>
+<ul>
+<li>关键的因素是通过使用独立取样的“dropout masks”，使这项工作与相同的正对。</li>
+</ul>
+<blockquote>
+<p>In standard training of Transformers (Vaswani et al., 2017), there is a dropout mask placed on fully-connected layers as well as attention probabilities (default p = 0.1). </p>
+</blockquote>
+<ul>
+<li>在Transformers的标准训练中，在完全连接的层上以及注意概率（默认p=0.1）上放置了一个dropout mask。</li>
+</ul>
+<blockquote>
+<p>We denote $\mathbf{h}<em>{i}^{z}=f</em>{\theta}\left(x_{i}, z\right)$ where $z$ is a random mask for dropout. </p>
+</blockquote>
+<ul>
+<li>我们用$\mathbf{h}<em>{i}^{z}=f</em>{\theta}\left(x_{i}, z\right)$表示，$z$是一个随机的dropout mask</li>
+</ul>
+<blockquote>
+<p>We simply feed the same input to the encoder twice by applying different dropout masks  $z, z^{\prime}$ and the training objective becomes:</p>
+</blockquote>
+<ul>
+<li>我们只需通过应用不同的dropout mask，$z，z^{\prime}$将相同的输入输入输入编码器两次，训练目标就变成：</li>
+</ul>
+<blockquote>
+<p>for a mini-batch with N sentences. </p>
+</blockquote>
+<ul>
+<li>对于少量的句子N</li>
+</ul>
+<blockquote>
+<p>Note that z is just the standard dropout mask in Transformers and we do not add any additional dropout.</p>
+</blockquote>
+<ul>
+<li>注意，z只是转变中的标准dropout mask，我们没有添加任何额外的dropout。</li>
+</ul>
+<h4 id="Dropout-noise-as-data-augmentation-作为数据增强的dropout噪声"><a href="#Dropout-noise-as-data-augmentation-作为数据增强的dropout噪声" class="headerlink" title="Dropout noise as data augmentation 作为数据增强的dropout噪声"></a>Dropout noise as data augmentation 作为数据增强的dropout噪声</h4><blockquote>
+<p>We view this approach as a minimal form of data augmentation: the positive pair takes exactly the same sentence, and their embeddings only differ in dropout masks. </p>
+</blockquote>
+<ul>
+<li>我们将这种方法视为数据扩充的一种最小形式：正例对采用完全相同的句子，它们的嵌入只在dropout mask上有所不同。</li>
+</ul>
+<blockquote>
+<p>We compare this approach to common augmentation techniques and other training objectives on the STS-B development set (Cer et al., 2017).</p>
+</blockquote>
+<ul>
+<li>我们将这种方法与常见的增强技术和STS-B开发集上的其他训练目标进行了比较。</li>
+</ul>
+<blockquote>
+<p>We use $N=512$ and $m = 10^6$ sentences randomly drawn from English Wikipedia in these experiments. </p>
+</blockquote>
+<p>在这些实验中，我们使用从英文维基百科中随机抽取的$N=512$ 和 $m = 10^6$ 个句子。</p>
+<blockquote>
+<p><strong>Table 2</strong> compares our approach to common data augmentation techniques such as crop, word deletion and replacement, which can be viewed as $\mathbf{h}=f_{\theta}(g(x), z)$ and $g$ is a (random) discrete operator on $x$. </p>
+</blockquote>
+<ul>
+<li><p><strong>表2</strong>将我们的方法与常见的数据扩充技术（如裁剪、字删除和替换）进行了比较，这些技术可以看作是$\mathbf{h}=f_{\theta}(g(x), z)$ ，而$g$是$x$上的（随机）离散运算符。</p>
+<img src="Table 2.png" alt="Table 2" style="zoom:50%;">
+
+
+
+</li>
+</ul>
+<blockquote>
+<p>We find that even deleting one word would hurt performance and none of the discrete augmentations outperforms basic dropout noise.</p>
+</blockquote>
+<ul>
+<li>我们发现，即使删除一个单词也会影响性能，并且没有一个离散增强比基本的丢失噪声更好。</li>
+</ul>
+<blockquote>
+<p>We also compare this self-prediction training objective to next-sentence objective used in Logeswaran and Lee (2018), taking either one encoder or two independent encoders. </p>
+</blockquote>
+<ul>
+<li>我们还将这个自我预测训练目标与Logeswaran和Lee中使用的下一个句子目标进行比较，选择一个编码器或两个独立的编码器。</li>
+</ul>
+<blockquote>
+<p>As shown in Table 3, we find that SimCSE performs much better than the next-sentence objectives (79.1 vs 69.7 on STS-B) and using one encoder instead of two makes a significant difference in our approach.</p>
+</blockquote>
+<ul>
+<li><p>如表3所示，我们发现SimCSE比下一个句子目标（79.1 vs STS-B为69.7）的表现要好得多，并且使用一个编码器而不是两个编码器使我们的方法有显著的不同。</p>
+<img src="Table 3.png" alt="Table 3" style="zoom:50%;">
+
+</li>
+</ul>
+<hr>
+<h4 id="Why-does-it-work"><a href="#Why-does-it-work" class="headerlink" title="Why does it work?"></a>Why does it work?</h4><blockquote>
+<p>To further understand the role of dropout noise in unsupervised SimCSE, we try out different dropout rates in Table 4 and observe that all the variants underperform the default dropout probability p = 0.1 from Transformers. </p>
+</blockquote>
+<ul>
+<li>为了进一步了解在无监督SimCSE中丢失噪声的作用，我们在表4中尝试了不同的丢失率，并观察到所有变体都低于Transformers的默认丢失概率p=0.1。</li>
+</ul>
+<img src="Table 4.png" alt="Table 4" style="zoom:50%;">
+
+<blockquote>
+<p>We find two extreme cases particularly interesting: “no dropout” (p = 0) and “fixed 0.1” (using default dropout p = 0.1 but the same dropout masks for the pair).</p>
+</blockquote>
+<ul>
+<li>我们发现两个极端的情况特别有趣：“无dropout”（p=0）和“固定0.1”（使用默认的dropoutp=0.1，但对这两种情况使用相同的dropout mask）。</li>
+</ul>
+<p> In both cases, the resulting embeddings for the pair are exactly the same, and it leads to a dramatic performance degradation. </p>
+<ul>
+<li>在这两种情况下，生成的嵌入对完全相同，这会导致性能急剧下降。</li>
+</ul>
+<blockquote>
+<p>We take the checkpoints of these models every 10 steps during training and visualize the alignment and uniformity metrics2 in Figure 2, along with a simple data augmentation model “delete one word”. </p>
+</blockquote>
+<ul>
+<li>在训练过程中，我们每10步对这些模型进行一次检查点检查，并在图2中可视化对齐和一致性度量2，以及一个简单的数据处理模型“删除一个单词”。</li>
+</ul>
+<img src="Figure 2.png" alt="Figure 2" style="zoom:50%;">
+
+<blockquote>
+<p>As is clearly shown, all models largely improve the uniformity. </p>
+</blockquote>
+<ul>
+<li>如图所示，所有模型在很大程度上改善了均匀性。</li>
+</ul>
+<blockquote>
+<p>However, the alignment of the two special variants also degrades drastically, while our unsupervised SimCSE keeps a steady alignment, thanks to the use of dropout noise. </p>
+</blockquote>
+<ul>
+<li>然而，这两种特殊变体的对齐也会急剧下降，而我们的无监督SimCSE由于使用了衰减噪声，保持了稳定的对齐。</li>
+</ul>
+<blockquote>
+<p>On the other hand, although “delete one word” slightly improves the alignment, it has a smaller gain on the uniformity, and eventually underperforms unsupervised SimCSE.</p>
+</blockquote>
+<ul>
+<li>另一方面，虽然“删除一个单词”稍微提高了对齐度，但它在一致性方面的增益较小，最终表现不如无监督SimCSE。</li>
+</ul>
+<hr>
+<h3 id="4-Supervised-SimCSE"><a href="#4-Supervised-SimCSE" class="headerlink" title="4 Supervised SimCSE"></a>4 Supervised SimCSE</h3><blockquote>
+<p>We have demonstrated that adding dropout noise is able to learn a good alignment for positive pairs $\left(x, x^{+}\right) \sim p_{\text {pos }}$. </p>
+</blockquote>
+<ul>
+<li>我们已经证明，对于正对$\left(x, x^{+}\right) \sim p_{\text {pos }}$，添加dropout噪声能够学习良好的对齐性。</li>
+</ul>
+<blockquote>
+<p>In this section, we study whether we can leverage supervised datasets to provide better training signals for improving alignment of our approach.</p>
+</blockquote>
+<ul>
+<li>在本节中，我们将研究是否可以利用监督数据集来提供更好的训练信号，以改进方法的一致性。</li>
+</ul>
+<blockquote>
+<p>Prior work (Conneau et al., 2017; Reimers and Gurevych, 2019) has demonstrated that supervised natural language inference (NLI) datasets (Bowman et al., 2015; Williams et al., 2018) are effective for learning sentence embeddings, by predicting whether the relationship between two sentences is <em>entailment</em>, <em>neutral</em> or <em>contradiction</em>. </p>
+</blockquote>
+<ul>
+<li>前期工作已经证明了有监督的自然语言推理（NLI）数据集通过预测两个句子之间的关系是蕴涵、中性还是矛盾，来有效地学习句子嵌入。</li>
+</ul>
+<blockquote>
+<p>In our contrastive learning framework, we instead directly take $(x_i,x_i^+)$pairs from supervised datasets and use them to optimize Eq. 1.</p>
+</blockquote>
+<ul>
+<li>在我们的对比学习框架中，我们直接从有监督的数据集中提取$(x_i,x_i^+)$对，并使用它们来优化等式1。</li>
+</ul>
+<p>$$<br>\ell_{i}=\log \frac{e^{\operatorname{sim}\left(\mathbf{h}<em>{i}, \mathbf{h}</em>{i}^{+}\right) / \tau}}{\sum_{j=1}^{N} e^{\operatorname{sim}\left(\mathbf{h}<em>{i}, \mathbf{h}</em>{j}^{+}\right) / \tau}}<br>$$</p>
+<hr>
+<h4 id="Exploiting-supervised-data利用监督数据"><a href="#Exploiting-supervised-data利用监督数据" class="headerlink" title="Exploiting supervised data利用监督数据"></a>Exploiting supervised data利用监督数据</h4><blockquote>
+<p>We first explore which annotated datasets are especially suitable for constructing positive pairs $(x_i,x_i^+)$. </p>
+</blockquote>
+<ul>
+<li>我们首先探讨哪些带注释的数据集特别适合于构造正对$(x_i,x_i^+)$。</li>
+</ul>
+<blockquote>
+<p>We exiperiment with a number of datasets with sentence-pair examples, including QQP4: Quora question pairs; Flickr30k (Young et al., 2014): each image is annotated with 5 human-written captions and we consider any two captions of the same image as a positive pair; ParaNMT (Wieting and Gimpel, 2018): a large-scale back-translation paraphrase dataset; and finally NLI datasets: SNLI (Bowman et al., 2015) and MNLI (Williams et al., 2018).</p>
+</blockquote>
+<ul>
+<li>我们用一些句子对的例子进行了实验，包括QQP问题对；Flickr：每幅图像都有5个人类书写的字幕注释，我们将同一幅图像的任意两个字幕视为正对；ParaNMT：大规模反译释义数据集；最后是NLI数据集：SNLI和MNLI。</li>
+</ul>
+<blockquote>
+<p>We train the contrastive learning model (Eq. 1) with different datasets and compare the results in Table 5 （for a fair comparison, we also run experiments with the same # of training pairs）. </p>
+</blockquote>
+<ul>
+<li>我们用不同的数据集训练对比学习模型（等式1），并比较表5中的结果（为了公平比较，我们还用相同的训练对进行实验）。</li>
+</ul>
+<img src="Table 5.png" alt="Table 5" style="zoom:50%;">
+
+<blockquote>
+<p>We find that most of these models using supervised datasets outperform our unsupervised approach, showing a clear benefit from supervised signals. </p>
+</blockquote>
+<ul>
+<li>我们发现，大多数使用监督数据集的模型都比我们的无监督方法有更好的性能，显示出监督信号的明显优势。</li>
+</ul>
+<blockquote>
+<p>Among all the options, using entailment pairs from the NLI (SNLI + MNLI) datasets perform the best. </p>
+</blockquote>
+<p>在所有选项中，使用NLI（SNLI+MNLI）数据集entailment对表现最好。</p>
+<blockquote>
+<p>We think this is reasonable, as the NLI datasets consist of high-quality and crowd-sourced pairs, and human annotators are expected to write the hypotheses manually based on the premises, and hence two sentences tend to have less lexical overlap. </p>
+</blockquote>
+<ul>
+<li>我们认为这是合理的，因为NLI数据集由高质量和众包的成对数据组成，并且人类注释者需要根据前提手工编写假设，因此两句话的词汇重叠较少。</li>
+</ul>
+<blockquote>
+<p>For instance, we find that the lexical overlap (F1 measured between two bags of words) for the entailment pairs (SNLI + MNLI) is 39%, while they are 60% and 55% for QQP and ParaNMT.</p>
+</blockquote>
+<ul>
+<li>例如，我们发现蕴涵对（SNLI+MNLI）的词汇重叠（两袋词之间的F1）为39%，而QQP和ParaNMT分别为60%和55%。</li>
+</ul>
+<hr>
+<h4 id="Contradiction-as-hard-negatives否定的矛盾"><a href="#Contradiction-as-hard-negatives否定的矛盾" class="headerlink" title="Contradiction as hard negatives否定的矛盾"></a>Contradiction as hard negatives否定的矛盾</h4><blockquote>
+<p>Finally, we further take the advantage of the NLI datasets by using its contradiction pairs as hard negatives. </p>
+</blockquote>
+<ul>
+<li>最后，我们进一步利用NLI数据集的矛盾对作为硬否定。</li>
+</ul>
+<blockquote>
+<p>In NLI datasets, given one premise, annotators are required to manually write one sentence that is absolutely true (entailment), one that might be true (neutral), and one that is definitely false (contradiction). </p>
+</blockquote>
+<ul>
+<li>在NLI数据集中，给定一个前提，注释者需要手动编写一个绝对正确的句子（蕴涵），一个可能正确的句子（中性），一个绝对错误的句子（矛盾）。</li>
+</ul>
+<blockquote>
+<p>Thus for each premise and its entailment hypothesis, there is an accompanying contradiction hypothesis7 (see Figure 1 for an example).</p>
+</blockquote>
+<ul>
+<li>因此，对于每个前提及其蕴涵假设，都有一个伴随的矛盾假设（参见图1中的示例）。</li>
+</ul>
+<blockquote>
+<p>Formally, we extend $(x_i,x_i^+)$ to $(x_i,x_i^+,x_i^-)$ where $x_i$ is the premise, $x_i^+$and $x_i^-$ are entailment and contradiction hypotheses. </p>
+</blockquote>
+<ul>
+<li>形式上，我们将$（x_i，x_i^+）$扩展到$(x_i,x_i^+,x_i^-)$，其中$x_i$是前提，$x_i^+$和$x_i^-$是蕴涵和矛盾假设</li>
+</ul>
+<blockquote>
+<p>The training objective $\ell_{i}$ is then defined by (N is the mini-batch size):</p>
+</blockquote>
+<ul>
+<li>训练目标$\ell{i}$由（N是最小批量大小）定义：</li>
+</ul>
+<p>$$<br>-\log \frac{e^{\operatorname{sim}\left(\mathbf{h}<em>{i}, \mathbf{h}</em>{i}^{+}\right) / \tau}}{\sum_{j=1}^{N}\left(e^{\operatorname{sim}\left(\mathbf{h}<em>{i}, \mathbf{h}</em>{j}^{+}\right) / \tau}+e^{\operatorname{sim}\left(\mathbf{h}<em>{i}, \mathbf{h}</em>{j}^{-}\right) / \tau}\right)}<br>$$</p>
+<blockquote>
+<p>As shown in Table 5, adding hard negatives can further improve performance (84.9 $\rightarrow$ 86.2) and this is our final supervised SimCSE. </p>
+</blockquote>
+<ul>
+<li>如表5所示，添加消极可以进一步提高性能（84.9$\rightarrow$86.2），这是我们的最终有监督SimCSE。</li>
+</ul>
+<blockquote>
+<p>We also tried to add the ANLI dataset (Nie et al., 2020) or combine it with our unsupervised SimCSE approach, but didn’t find a meaningful improvement. </p>
+</blockquote>
+<ul>
+<li>我们还尝试添加ANLI数据集或将其与我们的无监督SimCSE方法相结合，但没有发现有意义的改进。</li>
+</ul>
+<blockquote>
+<p>We also considered a dual encoder framework in supervised SimCSE and it hurt performance (86.2$\rightarrow$ 84.2).</p>
+</blockquote>
+<ul>
+<li>我们还考虑了监督SimCSE中的双编码器框架，它会影响性能（86.2$\rightarrow$84.2）。</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">冷冷冷</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://blog.bangbangbangbang.top/posts/ca01.html/">http://blog.bangbangbangbang.top/posts/ca01.html/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">冷冷冷</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">论文</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                                    <span class="chip bg-color">研究生</span>
+                                </a>
+                            
+                                <a href="/tags/SimCSE/">
+                                    <span class="chip bg-color">SimCSE</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">
+                                    <span class="chip bg-color">知识图谱</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        /* max-width: 100%; */
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>用户交流区</span>
+        <p cst="">温馨提示: 遵纪守法, 友善评论!</p>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'hLiMICB7hl5rRQnFlboDR9Mt-gzGzoHsz',
+        appKey: 'Al2q59mu4bHWbVo64fT1ip0U',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '粘贴图片到此处可以自动上传，填写邮箱可以自动回复哦'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/f664.html/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="SimCSE（七）">
+                        
+                        <span class="card-title">SimCSE（七）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Connection to Anisotropy
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                    论文
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                    <a href="/tags/SimCSE/">
+                        <span class="chip bg-color">SimCSE</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">
+                        <span class="chip bg-color">知识图谱</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/8218.html/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="SimCSE（五）">
+                        
+                        <span class="card-title">SimCSE（五）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            SimCSE Background
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                    论文
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                    <a href="/tags/SimCSE/">
+                        <span class="chip bg-color">SimCSE</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">
+                        <span class="chip bg-color">知识图谱</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 冷的博客<br />'
+            + '文章作者: 冷冷冷<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">冷冷冷</a>
+            |&nbsp;
+            
+                <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="http://www.beian.gov.cn/" target="_blank">黑ICP备20004207号</a>
+                </span>
+                
+            <!-- Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> -->
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            <!-- <br> -->
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-blue"></span>&nbsp;次
+            </span>
+            
+            <!-- 
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+             -->
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "7";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "小破站已勉强维持 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "小破站已勉强维持 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Leng-bingo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:805477481@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=805477481" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 805477481" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+
+</body>
+
+</html>

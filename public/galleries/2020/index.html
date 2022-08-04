@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="2020, Hexo,Sakura,JavaScript,html5,css3,Jquery,NodeJs,github,css,js,html,java">
+    <meta name="description" content="努力学习的小盆友">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>2020 | 冷的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<script src="/js/cursor.js"></script>
+
+<!-- weather -->
+<script type="text/javascript">
+    WIDGET = {FID: 'CdvtlJKi3n'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+<body>
+    
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">冷的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags/" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories/" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives/" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about/" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact/" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends/" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-card" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/galleries/" class="waves-effect waves-light">
+      
+      <i class="fas fa-image" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">冷的博客</div>
+        <div class="logo-desc">
+            
+            努力学习的小盆友
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-card"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/galleries/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-image"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<!-- <a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a> -->
+        
+    </nav>
+
+</header>
+
+    
+
+<link rel="stylesheet" href="/css/gallery.css">
+
+
+<link rel="stylesheet" href="/libs/justifiedGallery/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css">
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">2020</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="photo-wrapper">
+        
+            
+<script src="/js/crypto-js.js"></script>
+
+            
+<script src="/js/gallery-encrypt.js"></script>
+
+            <!-- <script src="/lib/crypto-js.js"></script>
+            <script src="/js/gallery-encrypt.js"></script> -->
+            <div id="hbe-security">
+                <div class="hbe-input-container">
+                    <input type="password" class="hbe-form-control" id="pass"  placeholder="请输入密码查看内容"/>
+                    <a href="javascript:;" class="btn-decrypt" id="btn_decrypt">解密</a>
+                </div>
+            </div>
+            <div  id="mygallery">
+                <div class="waterfall" id="encrypt-blog" style="display:none">
+                    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
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+
+<script src="/libs/fancybox/fancybox.js"></script>
+
+
+<script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
+
+<!-- <script src="/libs/fancybox/fancybox.js"></script>
+<script src="/libs/justifiedGallery/justifiedGallery.min.js"></script> -->
+<script>
+
+  $("a[rel=example_group]").fancybox();
+  $("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
+
+</script>
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">冷冷冷</a>
+            |&nbsp;
+            
+                <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="http://www.beian.gov.cn/" target="_blank">黑ICP备20004207号</a>
+                </span>
+                
+            <!-- Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> -->
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            <!-- <br> -->
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-blue"></span>&nbsp;次
+            </span>
+            
+            <!-- 
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+             -->
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "7";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "小破站已勉强维持 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "小破站已勉强维持 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Leng-bingo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:805477481@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=805477481" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 805477481" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+
+</body>
+
+</html>

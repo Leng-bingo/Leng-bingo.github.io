@@ -1,0 +1,1769 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="07年PAMI（一）, Hexo,Sakura,JavaScript,html5,css3,Jquery,NodeJs,github,css,js,html,java">
+    <meta name="description" content="努力学习的小盆友">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>07年PAMI（一） | 冷的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-coy.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<script src="/js/cursor.js"></script>
+
+<!-- weather -->
+<script type="text/javascript">
+    WIDGET = {FID: 'CdvtlJKi3n'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+<body>
+    
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">冷的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags/" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories/" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives/" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about/" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact/" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends/" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-card" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/galleries/" class="waves-effect waves-light">
+      
+      <i class="fas fa-image" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">冷的博客</div>
+        <div class="logo-desc">
+            
+            努力学习的小盆友
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-card"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/galleries/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-image"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<!-- <a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a> -->
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">07年PAMI（一）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        /* width: 225px;
+        padding-left: 1px; 20
+        padding-right: 3px; 20 */
+        width: 285px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        padding-top: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l10">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">论文</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                                <span class="chip bg-color">研究生</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%BF%B9%E9%89%B4%E5%AE%9A/">
+                                <span class="chip bg-color">笔迹鉴定</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                论文
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-08-26
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-08-26
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.8k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="纹理特征和异体字特征的文本无关书写人识别与鉴定"><a href="#纹理特征和异体字特征的文本无关书写人识别与鉴定" class="headerlink" title="纹理特征和异体字特征的文本无关书写人识别与鉴定"></a>纹理特征和异体字特征的文本无关书写人识别与鉴定</h2><h4 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1.摘要"></a>1.摘要</h4><ul>
+<li><p>使用从笔迹图像中提取的概率分布函数（PDF）来表征笔迹的特征，使用纹理特征和字符形状（异体字），</p>
+</li>
+<li><p>纹理上：使用基于轮廓的联合方向概率密度对方向和曲率信息进行编码，以提供特征。</p>
+</li>
+<li><p>异体字：作者认为书写人书写笔迹时，是一个基元产生器，给定笔迹中这些特定形状的概率密度函数就是书写人的特征，并通过<strong>grapheme clustering</strong>一种聚类方法，来获得基础码本。</p>
+</li>
+<li><p>结合多种功能（方向directional，grapheme字母形状？，游程概率密度）可以提高书写人识别和验证的性能。</p>
+</li>
+<li><p>所提出的方法适用于自由笔迹（有弧度的和独立的笔迹）</p>
+</li>
+<li><p>在使用少量文本时，可以获得可靠的概率预测</p>
+</li>
+</ul>
+<h4 id="2-关键词"><a href="#2-关键词" class="headerlink" title="2.关键词"></a>2.关键词</h4><ul>
+<li>笔迹分析</li>
+<li>书写人鉴定与识别</li>
+<li>生物特征行为</li>
+<li>联合方向概率分布</li>
+<li>字符发射概率分布</li>
+</ul>
+<h4 id="3-引言"><a href="#3-引言" class="headerlink" title="3.引言"></a>3.引言</h4><ul>
+<li><p>我们的方法是使用从900名书写人采集的笔迹样本数据集进行实验评估的。</p>
+</li>
+<li><p>我们的方法有两个显著特点：</p>
+<ul>
+<li>书写人的鉴别过程中尽量。</li>
+<li>使用独立于笔迹样本的文本内容特征来对个人笔迹风格进行编码。</li>
+<li>书写人的特点是使用从笔迹文本块中提取的概率分布函数。</li>
+<li>计算机完全不知道样本中写了什么。</li>
+</ul>
+</li>
+<li><p>书写人识别起源于更古老、更广泛的自动笔迹识别领域。</p>
+</li>
+<li><p>对于自动笔迹识别，寻找一种能够消除不同手写体之间的差异的不变的一种表示发放，以便于可靠的对字符和单词的形状进行分类。</p>
+</li>
+<li><p>书写人识别，还需要对这些变化的部分进行特定的增强以便确认是书写人。</p>
+</li>
+<li><p>笔迹识别和书写人识别代表了笔迹分析的两个对立面 。</p>
+</li>
+<li><p>笔迹识别，是为了找出某种特征，是每个人的字迹都可以用这个特征的大小来衡量。</p>
+</li>
+<li><p>书写人识别，是为了找出某种特征来区分不同人之间的差异。本质上这两个差不多。</p>
+</li>
+<li><p>在大型数据库中，执行一对多的寻找，已知书写人，返回可能的候选人列表。</p>
+</li>
+<li><p>第二章综述了 离线书写人识别和鉴定的最新研究工作。</p>
+</li>
+<li><p>第三章描述了实验的数据集。</p>
+</li>
+<li><p>第四章、第五章分别描述了提取纹理特征和异体字形状的算法。</p>
+</li>
+<li><p>第六章说明了用于特征匹配和特征融合技术的距离。</p>
+</li>
+<li><p>第七章给出了实验结果。</p>
+</li>
+<li><p>第八章进行讨论。</p>
+</li>
+<li><p>第九章得出结论。</p>
+</li>
+</ul>
+<h4 id="4-第二章，该领域的最新研究"><a href="#4-第二章，该领域的最新研究" class="headerlink" title="4.第二章，该领域的最新研究"></a>4.第二章，该领域的最新研究</h4><ul>
+<li><p>参考文献10对1989年前的自动书写人鉴别的研究工作进行了全面的回顾，现在，我们将调查最近几年中所提出的方法</p>
+</li>
+<li><p>书写人识别与验证分为两大方法</p>
+<ul>
+<li>文本相关：文本相关方法与签名验证技术十分相似，使用单个字符或已知语义内容的单词块之间进行比较。需要先对相关信息进行定位和分割，通常需要人来交互执行。</li>
+<li>文本无关：从文本块的整个图像中提取统计特征，使用最少的笔迹从样本文本内容中获得不敏感的稳定特征。<strong>优点是把人为干预的可能性降到最低</strong></li>
+</ul>
+</li>
+<li><p>Said提出了一种文本无关方法，使用<strong>多通道滤波Gabor滤波</strong>和<strong>共生灰度矩阵</strong>表示特定书写人的<strong>纹理特征</strong>。该方法需要修正偏移的字来生成统一的文字块，设置文本行/单词和文本兼具之间的预定义距离。</p>
+<ul>
+<li>数据集与方法：每个集合20个书写人，每个书写人写了25个样本用于评估。使用了加权欧式距离和Gabor特征的最近质心分类实现了96%的笔迹识别准确率。相同的方法也被用作与机器打印的笔迹文档和字体的识别。</li>
+</ul>
+</li>
+<li><p>Zois和An使用单个单词进行书写人识别和验证。</p>
+<ul>
+<li>数据集与方法：数据集包括50位书写人，每个书写人用英语和希腊语写了45遍characteristic这个词，在对图像进行阈值化处理和曲线细化后，对水平轮廓投影重新取样，分割成10段，并在两个尺度上使用<strong>形态学算子</strong>进行处理，得到20维向量，使用<strong>贝叶斯分类器</strong>或者<strong>多层感知器</strong>进行分类。希腊语和英语的准确率都在95%左右。</li>
+</ul>
+</li>
+<li><p>Srihari提出了大量特征，将其分为两类，宏观特征和微观特征。</p>
+<ul>
+<li>宏观特征在文档、段落和文字级别：<strong>灰度熵和阈值、墨水像素数、内部/外部轮廓数、四个方向的坡度分量、平均高度/斜度、段落纵横比和缩进、字长和上下区域比例</strong>。</li>
+<li>微观特征应用在文字和字符级别：渐变、结构和凹度（GSC）属性，最初使用手写数字识别。文本相关的统计评估是包含1000名书写人的数据集，这些书写人将156个单词的固定文本复制了三次。</li>
+<li>在识别的测试中，微观特征优于宏观特征，超过80%。<strong>多层感知器和参数分布用于笔迹鉴定</strong>，准确率为96%。</li>
+</ul>
+</li>
+<li><p>Bensefia使用笔迹分割方法对生成的笔迹的特征进行编码，不依赖于文本内容，文本无关。</p>
+<ul>
+<li>Grapheme聚类用于定义数据集中所有文档的公共特征空间。数据集有三个，88位书写人、39位书写人（历史文献）和每个书写人有两个样本的150个书写人。作者识别是在信息检索框架中执行的，而作者验证是基于比较的两种手写体中的图形分布之间的互信息。</li>
+</ul>
+</li>
+<li><p>Marti将文本行作为基本输入单元，涌过使用三个主要书写区域的高度、倾斜和字符宽度，连接组件的距离、墨水循环内的斑点、上下轮廓，计算与文本无关的特征。<strong>使用k-最近邻分类器</strong>。</p>
+</li>
+<li><p>Sch和Bunke使用<strong>基于HMM的手写识别器</strong>识别和验证书写人。识别器专门转对单个书写人，只使用来自所选人员的笔迹进行训练，输出HMM的对数似然分数来识别可变内容的单独文本行上的作者。</p>
+</li>
+<li><p>文献38提出了一种字符回溯和DTW匹配的交互方法</p>
+</li>
+<li><p><strong>本文提出</strong>，我们提出一种<strong>纹理级别的方法</strong>，使用边缘铰链的联合概率密度来评估特征。通过提取上本部分和下半部分的单独的概率密度，然后与特征向量拼接，还可以通过合并位置信息获得进一步的改进。我们<strong>异体字的方法</strong>，通过计算出码本，来解决问题。我们的方法是<strong>稀疏参数化设计</strong>，设计最少的训练。我们的实验数据集中，每个书写人只有两个样本。</p>
+</li>
+</ul>
+<h4 id="5-第三章，实验数据集"><a href="#5-第三章，实验数据集" class="headerlink" title="5.第三章，实验数据集"></a>5.第三章，实验数据集</h4><ul>
+<li>使用了三个数据集进行试验：Firemaker、IAM and ImUnipen</li>
+<li>Firemaker数据集包括250名荷兰人的笔迹，主要是学生，写在四张不同的A4纸上。<ul>
+<li>第一页，使用普通笔迹（主要是小写字母）抄写五段文字。</li>
+<li>第二页，只用大写字母抄写其余两段文字。</li>
+<li>第三页，包括伪造文本，这些样本没有被使用在当前研究中。</li>
+<li>第四页，用自己的话描述给定的卡通内容。</li>
+<li>这些样本主要由不同文本内容的小写笔迹组成，从两行到写满一整页的墨水量差异很大</li>
+<li>文档<strong>以300dpi，8位像素进行灰度扫描</strong>。</li>
+<li>在本实验中，对第一页和第四页小写内容和第二页第一段和第二段进行了搜索和匹配。</li>
+</ul>
+</li>
+<li>IAM数据库包括可变内容手写英文文本，用300dpi，8位像素灰度扫描<ul>
+<li>除了作者身份以外，图像还伴随着文本行、句子和单词层面的分割信息。</li>
+<li>此数据集包括每个书写人的手写页面数量可变，从一页（350人）到59页（一个书写人）。</li>
+<li>为了数据集具有可比性，修改了IAM数据集，使每个书写人始终包括两个样本：如果原有书写人在数据集中有两个以上的书写文档，只保留前两个；如果只有一个，就将文档分为一半。</li>
+<li>改进后的IAM集包括650人的小写笔迹，每个书写人两个样本，同一个书写人的墨水量大致相等，不同的书写人墨水量从三行到一整页量不等。</li>
+</ul>
+</li>
+<li>ImUnipen数据集包括215名书写人笔迹，每个书写人两个样本，这些图像来自Unipen在线手写数据库。使用<strong>Bresenham line generator和适当的brushing function</strong>将坐标的时间序列转换为模拟的300dpi图像。这些样本包含小写，文本内容和墨水量各不相同。使用数据集的65个书写人，130个样本，用于异体字书写方法中，训练计算书写人特定图形发射概率的形状码本。 </li>
+<li>我们合并Firemaker小写和IAM数据集，将其命名为“Large”，包括900个书写人，每个书写人两个样本，都是小写笔迹。我们的书写人识别和验证方法是文本无关的，不需要人工打标。表1为测试使用的所有数据集。</li>
+</ul>
+<p><img src="https://leng-mypic.oss-cn-beijing.aliyuncs.com/20210826143658.png"></p>
+<h4 id="6-第四章，纹理层次特征"><a href="#6-第四章，纹理层次特征" class="headerlink" title="6.第四章，纹理层次特征"></a>6.第四章，纹理层次特征</h4><ul>
+<li>三个阶段<ul>
+<li>特征提取</li>
+<li>特征匹配/特征结合</li>
+<li>书写人识别与鉴定</li>
+</ul>
+</li>
+<li>特征提取方法：我们使用从手写图像中提取的概率分布函数以文本无关的方式来描述书写人的个性。特征用于表示一个完整的概率分布函数pdf：不是一个单一的值，是一个完整的<strong>概率向量</strong>，它捕获了手写笔迹唯一性的一个方面。</li>
+<li>在研究中使用的所有特征的概述都在表2中。</li>
+</ul>
+<p><img src="https://leng-mypic.oss-cn-beijing.aliyuncs.com/20210826145045.png"></p>
+<ul>
+<li><strong>轮廓上计算：f1边缘方向概率分布函数、f2边缘铰链、f3h水平边缘共生、f3v垂直</strong></li>
+<li><strong>连通组件：f4，基元发射pdf</strong></li>
+<li><strong>二值化图像：f5h基于游程的水平pdf，f5v垂直</strong></li>
+<li><strong>灰度图像：自相关水平和垂直</strong></li>
+</ul>
+<hr>
+<ul>
+<li>本文中，选择了最具辨别力的特征<ul>
+<li><strong>归一化熵</strong></li>
+<li><strong>墨水密度pdf</strong></li>
+<li><strong>wavelet，子波？</strong></li>
+</ul>
+</li>
+<li>使用<strong>Otsu‘s方法大津法—最大类间方差法</strong>对笔迹样本的厨师灰度图像进行二值化。</li>
+<li>在二值图像中，只有有墨水的地方才能看得见，使用8邻域法进行轮廓标记，然后用摩尔法提取轮廓。轮廓将会对所有轮廓边界上所有像素标记坐标对（xk，yk）</li>
+<li>手写文档的四种主要表示形式用于特征计算：灰度图像、二值图像、连接组件和轮廓。</li>
+</ul>
+<h5 id="6-1边缘方向概率分布函数（f1）"><a href="#6-1边缘方向概率分布函数（f1）" class="headerlink" title="6.1边缘方向概率分布函数（f1）"></a>6.1边缘方向概率分布函数（f1）</h5><ul>
+<li>笔迹最突出的视觉属性是倾斜，他能显示个人的书写风格，笔迹倾斜也是一个人的稳定特征。</li>
+<li>通过考虑局部轮廓碎片方向，提取边缘方向pdf。</li>
+<li>分析连个相距一定距离的轮廓像素的方向和水平的夹角。当运行算法时，计算局部轮廓碎片的理论方向，建立<strong>角度直方图（每个角度出现的次数）</strong>。然后将角度直方图归一化为概率分布p，该概率分布给出了在手写笔记中找到从水平面测量角度的概率。</li>
+</ul>
+<p>$$<br>\phi=\arctan \left(\frac{y_{k+\epsilon}-y_{k}}{x_{k+\epsilon}-x_{k}}\right)<br>$$</p>
+<ul>
+<li><p>$\epsilon$控制分析轮廓片段的长度（两个像素之间的间隔），我们选择$\epsilon=5$，这个轮廓碎片的长度与墨水厚度6像素相当（在图片上是六个像素，六个小格子）。角度位于前两个象限，因为没有在线信息，我们不知道轮廓的书写顺序。<strong>通过实验将180度分为n=12个bin</strong>，十二份，每份15度可以详细的描述笔迹。（每一次x和y加5，直方图设置bin为12，最后统计每个角度区间的次数）</p>
+<ul>
+<li><p>直方图的bin：一个histogram，通常可以用一个列向量表示（例子中的a，b），列向量里面的每一个值就是一个bin（a,b），比如说列向量有个50个元素，那么就代表有50个bin。</p>
+<p>对于彩色图像，一般是rgb，3个维度，每个颜色一般是0-255的灰度级，就是对应8个bin，每个维度8bin，8x8x8=512bin</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-2边缘铰链f2"><a href="#6-2边缘铰链f2" class="headerlink" title="6.2边缘铰链f2"></a>6.2边缘铰链f2</h5><ul>
+<li>计算连接在同一个像素上的<strong>两条</strong>线的方向的联合概率密度，按照长度找到两个铰链点的坐标。最终的归一化直方图给出了联合PDF，量化了在图像中找到两个分别以1和2角定向的“铰接”轮廓碎片的机会。</li>
+<li>铰链的角度要跨越四个象限360度，在2n=24上进行量化。两个角度的组合数（4n的平方2n*2n），我们只考虑非冗余的（角度2大于角度1的）。<strong>最终两个角度组合数为$C_{2 n}^{2}+2 n=n(2 n+1)$，n=12，则共有300个维度</strong></li>
+</ul>
+<h5 id="6-3边缘方向共生（f3h，f3v）"><a href="#6-3边缘方向共生（f3h，f3v）" class="headerlink" title="6.3边缘方向共生（f3h，f3v）"></a>6.3边缘方向共生（f3h，f3v）</h5><ul>
+<li>方向共生概率分布函数，在边缘方向上的基础，水平延伸直到碰到一个像素，以相同距离5，在找到角度。获得两个角度。</li>
+<li>有n的平方的尺度，144。直方图。</li>
+<li>由f1方向特征和f3水平垂直特征描述</li>
+<li>联合概率密度表示笔迹风格的通用纹理特征，与文本无关</li>
+</ul>
+<h5 id="4-4其他纹理特征，游程长度5和自相关6"><a href="#4-4其他纹理特征，游程长度5和自相关6" class="headerlink" title="4.4其他纹理特征，游程长度5和自相关6"></a>4.4其他纹理特征，游程长度5和自相关6</h5><ul>
+<li>游程长度在二值图像上确定，同时考虑对应于墨迹的黑色像素或对应于背景的白色像素，黑色的统计特性收到墨水宽度的显著影响，因此也受到书写时笔的影响。白色像素捕捉字母内部区域和字母和单词之间的空白。白色长度的概率分布（在背景上）将使用书写人识别和验证测试。</li>
+<li>有两周基本扫描方法：沿着图像水平行扫描f5h和沿图像列的垂直扫描f5v。</li>
+<li>与上述基于轮廓的方向特征类似，游程长度的直方图被归一化标准化并解释为概率分布。我们特定只考虑60像素的游程以防止垂直测量进入连续文本行之间（数据集的写入行高度为120像素）</li>
+<li>为了计算自相关特征f6，图像的每一行都会以给定的偏移量移动到自身上，然后计算原始行和移动副本之间的<strong>标准化点积</strong>，计算中使用原始灰度图像，最大偏移量对应60像素。</li>
+<li>对每个偏移，然后对所有图像行的自相关系数进行平均，然后检测自相关函数在书写中是否有规律。规则：垂直笔划将在原始行及其水平移动副本中重叠，偏移量等于手写<strong>空间波长spatial wavelength</strong>的整数倍。结果将导致自相关函数的大的点积。</li>
+<li>自相关系数需要不同于其他特征的距离度量，应该是<strong>欧几里得距离而不是卡方距离</strong></li>
+</ul>
+<h4 id="7-第五章，异体字特征"><a href="#7-第五章，异体字特征" class="headerlink" title="7.第五章，异体字特征"></a>7.第五章，异体字特征</h4><ul>
+<li>假设书写人是一个基元生产机器，每个书写人都有特定的书写概率，通过聚类获得形状的公共码本。</li>
+<li>三个处理阶段<ul>
+<li>笔迹分割</li>
+<li>通过字形聚类生成码本</li>
+<li>然后在生成的码本上进行笔迹的概率分布函数或距离的计算</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-1笔迹分割方法"><a href="#7-1笔迹分割方法" class="headerlink" title="7.1笔迹分割方法"></a>7.1笔迹分割方法</h5><ul>
+<li>在笔迹中，产生的组件可能包含多个字符，所以我们需要对其进行分割。</li>
+<li>我们在下轮廓的最小值处进行分割，由下轮廓到上轮廓切分（取决于笔有多宽），切完后，提取问连接组件，然后将大小规范化为30x30像素并且保留原始图案的横纵比。</li>
+</ul>
+<h5 id="7-2通过聚类获得码本"><a href="#7-2通过聚类获得码本" class="headerlink" title="7.2通过聚类获得码本"></a>7.2通过聚类获得码本</h5><ul>
+<li>从ImUnipen数据集采集了来自65位书写人的130个样本，生成了码本</li>
+<li>从样本中生成了41000个规范大小30像素的训练集，用于聚类训练生成码本</li>
+<li>比较三种生成字形码本的聚类技术：**k-means，Kohonen SOM 1D,and 2D.**我们使用这些方法的标准实现方式</li>
+<li>产生最佳性能的码本，使用kmeans产生的码本是无序的，1d从左到右由上到下有顺序，2d是完整二维表示</li>
+</ul>
+<h5 id="7-3计算特定书写人的形状基元发射概率分布函数"><a href="#7-3计算特定书写人的形状基元发射概率分布函数" class="headerlink" title="7.3计算特定书写人的形状基元发射概率分布函数"></a>7.3计算特定书写人的形状基元发射概率分布函数</h5><ul>
+<li>书写人被认为是随机样式生成器的特征，生成一些列基本形状。单个形状的发射率是通过执法图来计算的。在直方图中，一个bin备份给码本中的每个元素。</li>
+<li>对于每个笔迹样本i，使用上文所说的方法进行分割、连接组件检测、大小规范过程提取图形。对于样本中的每个图形元g，使用欧几里得距离来找到最近的码本元素原型w（距离最小的赢家），并将出现的情况计入相应的<strong>直方图bin</strong>中：</li>
+</ul>
+<p>$$<br>w=\operatorname{argmin} _ {n}\left[\operatorname{dist}\left(g, C _ {n}\right)\right], h _ {i w} \leftarrow h _ {i w}+1,<br>$$</p>
+<ul>
+<li><p>n是索引，表示码本C中的形状。最后直方图$h_i$被标准化为概率分布函数$p_i$其总和为1。这个概率密度就是书写人的特征f4</p>
+</li>
+<li><p>该方法的本质是不包括所有可能的异体字零件的枚举。相反，通过为从给定的笔迹样本中提取笔迹碎片提供一组距离最近的吸引因子。码本跨过了一个形状空间去提供。基元出现的概率密度函数代表了书写人的特征。</p>
+</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">冷冷冷</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://blog.bangbangbangbang.top/posts/a7fb.html/">http://blog.bangbangbangbang.top/posts/a7fb.html/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">冷冷冷</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">论文</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                                    <span class="chip bg-color">研究生</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%BF%B9%E9%89%B4%E5%AE%9A/">
+                                    <span class="chip bg-color">笔迹鉴定</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        /* max-width: 100%; */
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>用户交流区</span>
+        <p cst="">温馨提示: 遵纪守法, 友善评论!</p>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'hLiMICB7hl5rRQnFlboDR9Mt-gzGzoHsz',
+        appKey: 'Al2q59mu4bHWbVo64fT1ip0U',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '粘贴图片到此处可以自动上传，填写邮箱可以自动回复哦'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/3781.html/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="07年PAMI（二）">
+                        
+                        <span class="card-title">07年PAMI（二）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            07年PAMI（二）
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                    论文
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%BF%B9%E9%89%B4%E5%AE%9A/">
+                        <span class="chip bg-color">笔迹鉴定</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/bb8d.html/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="04PAMI总结梳理">
+                        
+                        <span class="card-title">04PAMI总结梳理</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            04PAMI总结梳理
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                    论文
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%BF%B9%E9%89%B4%E5%AE%9A/">
+                        <span class="chip bg-color">笔迹鉴定</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 冷的博客<br />'
+            + '文章作者: 冷冷冷<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l2 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h3, h4 , h5 , h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h3, h4 , h5 , h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">冷冷冷</a>
+            |&nbsp;
+            
+                <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="http://www.beian.gov.cn/" target="_blank">黑ICP备20004207号</a>
+                </span>
+                
+            <!-- Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> -->
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            <!-- <br> -->
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-blue"></span>&nbsp;次
+            </span>
+            
+            <!-- 
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+             -->
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "7";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "小破站已勉强维持 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "小破站已勉强维持 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Leng-bingo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:805477481@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=805477481" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 805477481" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+
+</body>
+
+</html>
