@@ -2,6 +2,9 @@
 
 ```git
 git remote add origin git@github.com:Leng-bingo/Leng-Blog.git
+需要使用的如下三行
+git add .
+git commit -m "你的注释...." 
 git push -u origin main
 ```
 
